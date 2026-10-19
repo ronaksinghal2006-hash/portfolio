@@ -1,10 +1,8 @@
 
 /* =========================================
    RONAK SINGHAL - DEVELOPER PORTFOLIO
-   Theme: Dark Navy + Electric Blue
+   Dark Navy + Electric Blue
 ========================================= */
-
-/* ---------- 1. Global styles ---------- */
 
 :root {
     --bg: #090d18;
@@ -22,6 +20,8 @@
     --font-body: "DM Sans", sans-serif;
     --container: 1160px;
 }
+
+/* ---------- 1. Global ---------- */
 
 * {
     margin: 0;
@@ -133,7 +133,7 @@ iframe {
 }
 
 
-/* ---------- 2. Background decoration ---------- */
+/* ---------- 2. Background ---------- */
 
 .background-glow {
     position: absolute;
@@ -282,7 +282,7 @@ iframe {
 }
 
 
-/* ---------- 4. Hero section ---------- */
+/* ---------- 4. Hero ---------- */
 
 .hero {
     min-height: 690px;
@@ -439,7 +439,7 @@ iframe {
 }
 
 
-/* ---------- 5. Hero visual / code card ---------- */
+/* ---------- 5. Code card ---------- */
 
 .hero-visual {
     position: relative;
@@ -704,7 +704,7 @@ iframe {
 }
 
 
-/* ---------- 6. About section ---------- */
+/* ---------- 6. About ---------- */
 
 .about-section {
     background: rgba(16, 24, 40, 0.58);
@@ -821,7 +821,7 @@ iframe {
 }
 
 
-/* ---------- 7. Skills section ---------- */
+/* ---------- 7. Skills ---------- */
 
 .skills-grid {
     display: grid;
@@ -931,7 +931,7 @@ iframe {
 }
 
 
-/* ---------- 8. Projects section ---------- */
+/* ---------- 8. Projects ---------- */
 
 .projects-section {
     background: rgba(16, 24, 40, 0.58);
@@ -1229,7 +1229,7 @@ iframe {
 
 .project-link:hover {
     background: var(--blue);
-    color: #08101e;
+    color: var(--bg);
 }
 
 .projects-note {
@@ -1240,22 +1240,71 @@ iframe {
 }
 
 
-/* ---------- 9. Education section ---------- */
+/* ---------- 9. Education ---------- */
+
+.education-section {
+    background: var(--bg);
+}
 
 .education-layout {
     display: grid;
     grid-template-columns: 0.85fr 1fr;
-    gap: 100px;
+    gap: 85px;
     align-items: start;
 }
 
+.education-section .section-heading {
+    margin-bottom: 0;
+}
+
 .education-intro {
-    max-width: 300px;
+    max-width: 340px;
     color: var(--text);
     font-size: 13px;
     line-height: 1.9;
     margin-top: 22px;
 }
+
+/* Summary card under the education heading */
+
+.education-summary {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    max-width: 370px;
+    padding: 18px;
+    margin-top: 30px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.summary-icon {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    color: var(--blue);
+    background: rgba(105, 167, 255, 0.1);
+    border-radius: 6px;
+}
+
+.education-summary strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.education-summary p {
+    color: var(--text);
+    font-size: 11px;
+    line-height: 1.8;
+    margin-top: 5px;
+}
+
+/* Timeline line */
 
 .timeline {
     position: relative;
@@ -1269,8 +1318,13 @@ iframe {
     top: 8px;
     bottom: 14px;
     width: 1px;
-    background: linear-gradient(var(--blue), rgba(105, 167, 255, 0.08));
+    background: linear-gradient(
+        var(--blue),
+        rgba(105, 167, 255, 0.08)
+    );
 }
+
+/* Individual education entries */
 
 .timeline-item {
     position: relative;
@@ -1296,13 +1350,16 @@ iframe {
 .timeline-date {
     color: var(--blue);
     font-size: 9px;
-    letter-spacing: 1.6px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    line-height: 1.8;
     margin-bottom: 10px;
 }
 
 .timeline-item h3 {
     font-family: var(--font-heading);
     font-size: 19px;
+    line-height: 1.45;
     margin-bottom: 8px;
 }
 
@@ -1314,6 +1371,54 @@ iframe {
     margin-bottom: 13px;
 }
 
+.timeline-item .institution-name {
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.8;
+    margin-bottom: 9px;
+}
+
+/* Grade / SGPA card */
+
+.education-result {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    min-width: 155px;
+    padding: 12px 15px;
+    margin: 5px 0 12px;
+    background: rgba(105, 167, 255, 0.07);
+    border: 1px solid rgba(105, 167, 255, 0.2);
+    border-radius: 7px;
+}
+
+.result-label {
+    color: var(--muted);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.education-result strong {
+    color: var(--blue);
+    font-family: var(--font-heading);
+    font-size: 29px;
+    line-height: 1.35;
+    letter-spacing: -0.8px;
+}
+
+.education-result strong small {
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+/* Timeline status labels */
+
 .timeline-tag {
     display: inline-block;
     padding: 5px 9px;
@@ -1323,8 +1428,19 @@ iframe {
     font-size: 9px;
 }
 
+.current-tag {
+    color: var(--cyan);
+    background: rgba(120, 230, 231, 0.06);
+    border-color: rgba(120, 230, 231, 0.2);
+}
 
-/* ---------- 10. Contact section ---------- */
+.current-education .timeline-marker {
+    background: var(--blue);
+    box-shadow: 0 0 16px rgba(105, 167, 255, 0.55);
+}
+
+
+/* ---------- 10. Contact ---------- */
 
 .contact-section {
     padding-top: 80px;
@@ -1560,7 +1676,7 @@ iframe {
 }
 
 
-/* ---------- 12. Scroll reveal animation ---------- */
+/* ---------- 12. Scroll animations ---------- */
 
 .reveal {
     opacity: 0;
@@ -1574,7 +1690,7 @@ iframe {
 }
 
 
-/* ---------- 13. Tablet layout ---------- */
+/* ---------- 13. Tablet ---------- */
 
 @media (max-width: 1050px) {
     .container {
@@ -1624,7 +1740,7 @@ iframe {
     }
 
     .education-layout {
-        gap: 55px;
+        gap: 50px;
     }
 
     .contact-panel {
@@ -1647,7 +1763,7 @@ iframe {
 }
 
 
-/* ---------- 14. Mobile navigation and layout ---------- */
+/* ---------- 14. Mobile ---------- */
 
 @media (max-width: 760px) {
     html {
@@ -1847,6 +1963,10 @@ iframe {
         max-width: 480px;
     }
 
+    .education-summary {
+        max-width: 480px;
+    }
+
     .contact-panel {
         min-height: auto;
         padding: 38px 30px;
@@ -1893,7 +2013,7 @@ iframe {
 }
 
 
-/* ---------- 15. Small mobile phones ---------- */
+/* ---------- 15. Small phones ---------- */
 
 @media (max-width: 480px) {
     .container {
@@ -2125,8 +2245,31 @@ iframe {
         font-size: 17px;
     }
 
+    /* Education on small screens */
+
+    .education-layout {
+        gap: 35px;
+    }
+
+    .education-summary {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .education-summary strong {
+        font-size: 11px;
+    }
+
+    .education-summary p {
+        font-size: 10px;
+    }
+
     .timeline {
         padding-left: 26px;
+    }
+
+    .timeline::before {
+        left: 4px;
     }
 
     .timeline-marker {
@@ -2135,10 +2278,33 @@ iframe {
 
     .timeline-item {
         padding-left: 10px;
+        padding-bottom: 32px;
+    }
+
+    .timeline-date {
+        font-size: 8px;
+        letter-spacing: 1px;
     }
 
     .timeline-item h3 {
         font-size: 17px;
+    }
+
+    .timeline-item .institution-name {
+        font-size: 11px;
+    }
+
+    .timeline-item p {
+        font-size: 11px;
+    }
+
+    .education-result {
+        min-width: 145px;
+        padding: 10px 13px;
+    }
+
+    .education-result strong {
+        font-size: 26px;
     }
 
     .contact-panel {
@@ -2177,7 +2343,7 @@ iframe {
 }
 
 
-/* ---------- 16. Reduced motion accessibility ---------- */
+/* ---------- 16. Reduced motion ---------- */
 
 @media (prefers-reduced-motion: reduce) {
     *,
@@ -2194,4 +2360,3 @@ iframe {
         transform: none;
     }
 }
-
