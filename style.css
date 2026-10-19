@@ -1,1412 +1,461 @@
 
-/* ================================
-   RONAK SINGHAL - PORTFOLIO
-   Dark Navy & Electric Blue Theme
-================================ */
-
-:root {
-    --bg: #090d18;
-    --bg-soft: #0e1423;
-    --card: #111a2c;
-    --card-light: #172239;
-    --blue: #69a7ff;
-    --blue-bright: #428bff;
-    --cyan: #78e6e7;
-    --white: #f4f7ff;
-    --text: #a5b0c5;
-    --muted: #73809a;
-    --border: rgba(153, 177, 220, 0.14);
-    --font-heading: "Space Grotesk", sans-serif;
-    --font-body: "DM Sans", sans-serif;
-    --container: 1160px;
-}
-
-/* RESET */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
-}
-
-body {
-    background: var(--bg);
-    color: var(--white);
-    font-family: var(--font-body);
-    line-height: 1.7;
-    overflow-x: hidden;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-button,
-input,
-textarea {
-    font: inherit;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-.container {
-    width: min(var(--container), calc(100% - 48px));
-    margin: 0 auto;
-}
-
-.section {
-    padding: 105px 0;
-}
-
-.section-soft {
-    background: var(--bg-soft);
-}
-
-::selection {
-    color: white;
-    background: var(--blue-bright);
-}
-
-/* HEADER AND NAVIGATION */
-
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(9, 13, 24, 0.88);
-    border-bottom: 1px solid var(--border);
-    backdrop-filter: blur(18px);
-}
-
-.navbar {
-    min-height: 78px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-}
-
-.logo {
-    font-family: var(--font-heading);
-    font-size: 1.75rem;
-    font-weight: 700;
-    letter-spacing: -1px;
-    white-space: nowrap;
-}
-
-.logo span {
-    color: var(--blue);
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 27px;
-}
-
-.nav-links a {
-    color: var(--text);
-    font-size: 0.88rem;
-    transition: color 0.25s ease;
-}
-
-.nav-links a:hover {
-    color: var(--blue);
-}
-
-.nav-links .nav-contact {
-    color: var(--white);
-    padding: 10px 17px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-}
-
-.nav-links .nav-contact:hover {
-    border-color: var(--blue);
-    background: rgba(105, 167, 255, 0.08);
-}
-
-/* HERO SECTION */
-
-.hero-section {
-    min-height: 680px;
-    min-height: min(760px, calc(100vh - 78px));
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-top: 85px;
-    padding-bottom: 100px;
-    background:
-        radial-gradient(
-            circle at 80% 35%,
-            rgba(48, 105, 195, 0.12),
-            transparent 32%
-        ),
-        var(--bg);
-}
-
-.hero-layout {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    align-items: center;
-    gap: 70px;
-}
-
-.eyebrow {
-    color: var(--blue);
-    font-size: 0.76rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 18px;
-}
-
-.hero-content .eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    letter-spacing: 1px;
-    text-transform: none;
-    font-size: 0.9rem;
-}
-
-.status-dot {
-    width: 9px;
-    height: 9px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    background: var(--cyan);
-    box-shadow: 0 0 13px rgba(120, 230, 231, 0.6);
-}
-
-.hero-content h1 {
-    font-family: var(--font-heading);
-    font-size: clamp(2.7rem, 5.5vw, 4.7rem);
-    font-weight: 700;
-    letter-spacing: -3px;
-    line-height: 1.12;
-    margin-bottom: 20px;
-}
-
-.hero-content h1 span,
-.section-heading h2 span,
-.contact-copy h2 span {
-    color: var(--blue);
-}
-
-.hero-content h2 {
-    max-width: 590px;
-    font-family: var(--font-heading);
-    font-size: clamp(1.5rem, 2.8vw, 2.3rem);
-    line-height: 1.3;
-    margin-bottom: 22px;
-}
-
-.accent-text {
-    color: var(--cyan);
-}
-
-.hero-description {
-    max-width: 540px;
-    color: var(--text);
-    font-size: 1.04rem;
-    line-height: 1.9;
-}
-
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 32px;
-}
-
-.btn {
-    min-height: 49px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 12px 22px;
-    border-radius: 8px;
-    font-size: 0.92rem;
-    font-weight: 700;
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease,
-        border-color 0.25s ease;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-}
-
-.btn-primary {
-    color: #07101f;
-    background: var(--blue);
-    box-shadow: 0 8px 25px rgba(66, 139, 255, 0.15);
-}
-
-.btn-primary:hover {
-    background: #8bbaff;
-}
-
-.btn-secondary {
-    color: var(--white);
-    border: 1px solid var(--border);
-    background: transparent;
-}
-
-.btn-secondary:hover {
-    border-color: var(--blue);
-}
-
-.hero-socials {
-    display: flex;
-    gap: 25px;
-    margin-top: 31px;
-}
-
-.hero-socials a {
-    color: var(--muted);
-    font-size: 0.88rem;
-    transition: color 0.2s ease;
-}
-
-.hero-socials a:hover {
-    color: var(--blue);
-}
-
-/* HERO CODE CARD */
-
-.hero-visual {
-    position: relative;
-    min-width: 0;
-    padding: 30px 0;
-}
-
-.visual-glow {
-    position: absolute;
-    inset: 15% 5%;
-    background: rgba(54, 120, 237, 0.16);
-    filter: blur(75px);
-    border-radius: 50%;
-}
-
-.profile-card {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    max-width: 450px;
-    margin: 0 auto;
-    overflow: hidden;
-    border: 1px solid rgba(127, 166, 230, 0.2);
-    border-radius: 17px;
-    background: rgba(17, 26, 44, 0.94);
-    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
-    transform: rotate(1deg);
-}
-
-.profile-top {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    padding: 17px 20px;
-    border-bottom: 1px solid var(--border);
-    background: rgba(255, 255, 255, 0.015);
-}
-
-.window-dot {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-}
-
-.red {
-    background: #ff7777;
-}
-
-.yellow {
-    background: #ffd166;
-}
-
-.green {
-    background: #64dca0;
-}
-
-.profile-label {
-    margin-left: auto;
-    color: var(--muted);
-    font-size: 0.76rem;
-}
-
-.code-preview {
-    min-height: 290px;
-    padding: 28px 25px;
-    color: #d7e2f5;
-    font-family: monospace;
-    font-size: clamp(0.76rem, 1.3vw, 0.95rem);
-    line-height: 2.1;
-    overflow-wrap: anywhere;
-}
-
-.code-indent {
-    padding-left: 22px;
-}
-
-.code-purple {
-    color: #c5a1ff;
-}
-
-.code-green {
-    color: #8fe3b0;
-}
-
-.code-orange {
-    color: #ffbd7b;
-}
-
-.code-space {
-    margin-top: 15px;
-}
-
-.cursor {
-    color: var(--cyan);
-    animation: blink 1s steps(2, start) infinite;
-}
-
-@keyframes blink {
-    to {
-        visibility: hidden;
-    }
-}
-
-.profile-bottom {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    padding: 14px 20px;
-    color: var(--muted);
-    font-size: 0.75rem;
-    border-top: 1px solid var(--border);
-}
-
-.profile-bottom span:first-child {
-    color: var(--cyan);
-}
-
-.floating-badge {
-    position: absolute;
-    z-index: 2;
-    padding: 12px 16px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    background: var(--card);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    color: var(--white);
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.badge-one {
-    top: 3px;
-    right: -15px;
-}
-
-.badge-two {
-    bottom: 8px;
-    left: -20px;
-}
-
-.scroll-indicator {
-    position: absolute;
-    bottom: 23px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--muted);
-    font-size: 0.77rem;
-}
-
-/* SECTION HEADINGS */
-
-.section-heading {
-    max-width: 680px;
-    margin: 0 auto 55px;
-    text-align: center;
-}
-
-.section-heading .eyebrow {
-    margin-bottom: 12px;
-}
-
-.section-heading h2 {
-    font-family: var(--font-heading);
-    font-size: clamp(2.1rem, 4vw, 3rem);
-    line-height: 1.2;
-    letter-spacing: -1.5px;
-    margin-bottom: 15px;
-}
-
-.section-heading > p:last-child {
-    color: var(--text);
-    font-size: 0.97rem;
-}
-
-/* ABOUT */
-
-.about-layout {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 24px;
-}
-
-.about-card,
-.info-card {
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    background: var(--card);
-}
-
-.about-main {
-    padding: 37px;
-}
-
-.card-icon {
-    width: 46px;
-    height: 46px;
-    display: grid;
-    place-items: center;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    background: rgba(105, 167, 255, 0.12);
-    color: var(--blue);
-    font-size: 1.5rem;
-}
-
-.about-main h3 {
-    max-width: 480px;
-    font-family: var(--font-heading);
-    font-size: 1.7rem;
-    line-height: 1.4;
-    margin-bottom: 20px;
-}
-
-.about-main p {
-    color: var(--text);
-    margin-bottom: 15px;
-}
-
-.about-main p:last-child {
-    margin-bottom: 0;
-}
-
-.about-side {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.info-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 17px;
-    flex: 1;
-    padding: 22px;
-    transition:
-        border-color 0.25s ease,
-        transform 0.25s ease;
-}
-
-.info-card:hover {
-    transform: translateX(4px);
-    border-color: rgba(105, 167, 255, 0.4);
-}
-
-.info-icon {
-    font-size: 1.5rem;
-}
-
-.info-card h4 {
-    margin-bottom: 4px;
-    font-size: 0.98rem;
-}
-
-.info-card p {
-    color: var(--text);
-    font-size: 0.87rem;
-}
-
-/* SKILLS */
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-}
-
-.skill-card {
-    min-width: 0;
-    padding: 28px 24px;
-    border: 1px solid var(--border);
-    border-radius: 13px;
-    background: var(--card);
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        background 0.25s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(105, 167, 255, 0.45);
-    background: var(--card-light);
-}
-
-.skill-symbol {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 44px;
-    min-height: 44px;
-    margin-bottom: 20px;
-    padding: 5px;
-    border: 1px solid rgba(105, 167, 255, 0.2);
-    border-radius: 10px;
-    background: rgba(105, 167, 255, 0.09);
-    color: var(--blue);
-    font-family: monospace;
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
-.skill-card h3 {
-    margin-bottom: 8px;
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-}
-
-.skill-card p {
-    color: var(--text);
-    font-size: 0.88rem;
-}
-
-.skills-note {
-    margin-top: 22px;
-    color: var(--muted);
-    text-align: center;
-    font-size: 0.82rem;
-}
-
-/* PROJECTS */
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 26px;
-}
-
-.project-card {
-    min-width: 0;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    border-radius: 15px;
-    background: var(--card);
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(105, 167, 255, 0.4);
-}
-
-.project-visual {
-    position: relative;
-    min-height: 245px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.bookstore-visual {
-    background:
-        radial-gradient(circle at 50% 50%, rgba(105, 167, 255, 0.19), transparent 45%),
-        #111f35;
-}
-
-.portfolio-visual {
-    background:
-        radial-gradient(circle at 50% 50%, rgba(120, 230, 231, 0.13), transparent 45%),
-        #13232f;
-}
-
-.project-number {
-    position: absolute;
-    top: 19px;
-    left: 20px;
-    color: rgba(226, 236, 255, 0.65);
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-}
-
-.visual-caption {
-    position: absolute;
-    bottom: 17px;
-    right: 20px;
-    color: rgba(226, 236, 255, 0.65);
-    font-size: 0.73rem;
-}
-
-/* Bookstore illustration */
-
-.book-illustration {
-    position: relative;
-    width: 160px;
-    height: 135px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    perspective: 500px;
-}
-
-.book {
-    position: absolute;
-    width: 70px;
-    height: 100px;
-    border: 2px solid rgba(255, 255, 255, 0.22);
-    border-radius: 4px 8px 8px 4px;
-    box-shadow: 8px 10px 18px rgba(0, 0, 0, 0.25);
-}
-
-.book-back {
-    transform: translate(-34px, 3px) rotate(-17deg);
-    background: #315d9b;
-}
-
-.book-middle {
-    transform: translate(24px, 0) rotate(15deg);
-    background: #4b7d8b;
-}
-
-.book-front {
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    transform: translate(-2px, 0) rotate(-3deg);
-    background: linear-gradient(145deg, #7caeff, #315c9b);
-    color: #fff;
-    font-family: var(--font-heading);
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-}
-
-.book-front strong {
-    font-size: 1rem;
-}
-
-/* Portfolio browser illustration */
-
-.mini-browser {
-    width: min(250px, 75%);
-    overflow: hidden;
-    border: 1px solid rgba(160, 197, 255, 0.4);
-    border-radius: 9px;
-    background: #0d1525;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    transform: rotate(-3deg);
-}
-
-.mini-browser-top {
-    display: flex;
-    gap: 5px;
-    padding: 10px;
-    border-bottom: 1px solid var(--border);
-}
-
-.mini-browser-top i {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--blue);
-}
-
-.mini-browser-body {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-}
-
-.mini-line {
-    width: 85%;
-    height: 5px;
-    margin-top: 10px;
-    border-radius: 5px;
-    background: #293a54;
-}
-
-.mini-line.short {
-    width: 35%;
-    margin-top: 0;
-    background: var(--cyan);
-}
-
-.mini-line.medium {
-    width: 60%;
-}
-
-.mini-title {
-    margin-top: 10px;
-    color: var(--white);
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
-.mini-button {
-    width: 70px;
-    height: 19px;
-    margin-top: 17px;
-    border-radius: 4px;
-    background: var(--blue);
-}
-
-.project-content {
-    padding: 27px;
-}
-
-.project-type {
-    margin-bottom: 8px;
-    color: var(--cyan);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.project-content h3 {
-    margin-bottom: 12px;
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-}
-
-.project-content > p {
-    min-height: 55px;
-    color: var(--text);
-    font-size: 0.92rem;
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 20px 0 24px;
-}
-
-.project-tags span {
-    padding: 5px 10px;
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    color: var(--text);
-    font-size: 0.75rem;
-}
-
-.project-link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    padding-top: 17px;
-    border-top: 1px solid var(--border);
-    color: var(--blue);
-    font-size: 0.9rem;
-    font-weight: 700;
-    transition: color 0.2s ease;
-}
-
-.project-link:hover {
-    color: var(--cyan);
-}
-
-.project-link span {
-    font-size: 1.15rem;
-}
-
-/* EDUCATION */
-
-.education-layout {
-    display: grid;
-    grid-template-columns: 0.75fr 1.25fr;
-    align-items: start;
-    gap: 65px;
-}
-
-.education-summary {
-    position: sticky;
-    top: 110px;
-    padding: 30px;
-    border: 1px solid var(--border);
-    border-radius: 15px;
-    background:
-        radial-gradient(circle at top right, rgba(105, 167, 255, 0.13), transparent 50%),
-        var(--card);
-}
-
-.education-icon {
-    width: 54px;
-    height: 54px;
-    display: grid;
-    place-items: center;
-    margin-bottom: 24px;
-    border: 1px solid rgba(105, 167, 255, 0.2);
-    border-radius: 13px;
-    background: rgba(105, 167, 255, 0.1);
-    font-size: 1.6rem;
-}
-
-.education-summary h3 {
-    margin-bottom: 12px;
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    line-height: 1.4;
-}
-
-.education-summary > p {
-    color: var(--text);
-    font-size: 0.92rem;
-}
-
-.education-highlight {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    margin-top: 30px;
-    padding-top: 22px;
-    border-top: 1px solid var(--border);
-}
-
-.education-highlight span {
-    color: var(--muted);
-    font-size: 0.85rem;
-}
-
-.education-highlight strong {
-    color: var(--cyan);
-    font-family: var(--font-heading);
-    font-size: 2.4rem;
-    line-height: 1.3;
-}
-
-.timeline {
-    position: relative;
-    padding-left: 29px;
-}
-
-.timeline::before {
-    content: "";
-    position: absolute;
-    top: 9px;
-    bottom: 30px;
-    left: 6px;
-    width: 2px;
-    background: linear-gradient(
-        to bottom,
-        var(--blue),
-        rgba(105, 167, 255, 0.12)
-    );
-}
-
-.timeline-item {
-    position: relative;
-    padding: 0 0 34px 0;
-}
-
-.timeline-marker {
-    position: absolute;
-    top: 5px;
-    left: -29px;
-    width: 14px;
-    height: 14px;
-    border: 3px solid var(--blue);
-    border-radius: 50%;
-    background: var(--bg-soft);
-    box-shadow: 0 0 0 5px rgba(105, 167, 255, 0.08);
-}
-
-.timeline-date {
-    margin-bottom: 10px;
-    color: var(--blue);
-    font-size: 0.85rem;
-    font-weight: 700;
-}
-
-.timeline-content {
-    padding: 24px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: var(--card);
-    transition: border-color 0.25s ease;
-}
-
-.timeline-content:hover {
-    border-color: rgba(105, 167, 255, 0.4);
-}
-
-.timeline-tag {
-    display: inline-block;
-    margin-bottom: 12px;
-    padding: 4px 9px;
-    border-radius: 5px;
-    background: rgba(105, 167, 255, 0.1);
-    color: var(--blue);
-    font-size: 0.72rem;
-    font-weight: 700;
-}
-
-.current-tag {
-    color: var(--cyan);
-    background: rgba(120, 230, 231, 0.09);
-}
-
-.timeline-content h3 {
-    margin-bottom: 12px;
-    font-family: var(--font-heading);
-    font-size: 1.12rem;
-    line-height: 1.5;
-}
-
-.degree-name {
-    margin: -3px 0 15px;
-    color: var(--text);
-    font-size: 0.9rem;
-}
-
-.education-result {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid var(--border);
-}
-
-.result-label {
-    color: var(--muted);
-    font-size: 0.83rem;
-}
-
-.education-result strong {
-    color: var(--cyan);
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-}
-
-.current-education .timeline-content {
-    border-color: rgba(120, 230, 231, 0.25);
-}
-
-/* CONTACT */
-
-.contact-section {
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-.contact-panel {
-    display: grid;
-    grid-template-columns: 1fr 0.9fr;
-    align-items: center;
-    gap: 55px;
-    padding: clamp(27px, 5vw, 60px);
-    border: 1px solid rgba(105, 167, 255, 0.2);
-    border-radius: 20px;
-    background:
-        radial-gradient(circle at top left, rgba(66, 139, 255, 0.1), transparent 45%),
-        var(--card);
-}
-
-.contact-copy h2 {
-    max-width: 520px;
-    margin-bottom: 20px;
-    font-family: var(--font-heading);
-    font-size: clamp(2rem, 4vw, 3.1rem);
-    line-height: 1.2;
-    letter-spacing: -1.5px;
-}
-
-.contact-copy > p:not(.eyebrow) {
-    max-width: 490px;
-    color: var(--text);
-    font-size: 0.96rem;
-}
-
-.email-button {
-    margin-top: 27px;
-}
-
-.contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
-    min-width: 0;
-}
-
-.contact-link {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    min-width: 0;
-    padding: 17px;
-    border: 1px solid var(--border);
-    border-radius: 11px;
-    background: rgba(9, 13, 24, 0.35);
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        background 0.25s ease;
-}
-
-.contact-link:hover {
-    transform: translateX(4px);
-    border-color: rgba(105, 167, 255, 0.45);
-    background: rgba(105, 167, 255, 0.05);
-}
-
-.contact-icon {
-    display: grid;
-    place-items: center;
-    width: 43px;
-    height: 43px;
-    flex-shrink: 0;
-    border: 1px solid rgba(105, 167, 255, 0.18);
-    border-radius: 10px;
-    background: rgba(105, 167, 255, 0.09);
-    color: var(--blue);
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
-.contact-detail {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    flex: 1;
-}
-
-.contact-detail small {
-    color: var(--muted);
-    font-size: 0.75rem;
-}
-
-.contact-detail strong {
-    overflow-wrap: anywhere;
-    color: var(--white);
-    font-size: 0.88rem;
-    font-weight: 600;
-}
-
-.contact-arrow {
-    flex-shrink: 0;
-    color: var(--blue);
-    font-size: 1.1rem;
-}
-
-/* FOOTER */
-
-.site-footer {
-    border-top: 1px solid var(--border);
-    background: #080b14;
-}
-
-.footer-content {
-    min-height: 95px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding-top: 18px;
-    padding-bottom: 18px;
-}
-
-.footer-content .logo {
-    font-size: 1.4rem;
-}
-
-.footer-content p,
-.back-to-top {
-    color: var(--muted);
-    font-size: 0.83rem;
-}
-
-.back-to-top {
-    transition: color 0.2s ease;
-}
-
-.back-to-top:hover {
-    color: var(--blue);
-}
-
-/* RESPONSIVE DESIGN */
-
-@media (max-width: 1000px) {
-    .nav-links {
-        gap: 16px;
-    }
-
-    .nav-links a {
-        font-size: 0.82rem;
-    }
-
-    .hero-layout {
-        gap: 35px;
-    }
-
-    .hero-content h1 {
-        letter-spacing: -2px;
-    }
-
-    .badge-one {
-        right: -5px;
-    }
-
-    .badge-two {
-        left: -5px;
-    }
-
-    .education-layout {
-        gap: 35px;
-    }
-
-    .contact-panel {
-        gap: 30px;
-    }
-}
-
-@media (max-width: 760px) {
-    .container {
-        width: min(100% - 36px, var(--container));
-    }
-
-    .section {
-        padding: 75px 0;
-    }
-
-    .navbar {
-        min-height: auto;
-        padding-top: 17px;
-        padding-bottom: 17px;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .nav-links {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 9px 17px;
-    }
-
-    .nav-links a {
-        font-size: 0.82rem;
-    }
-
-    .nav-links .nav-contact {
-        padding: 4px 9px;
-    }
-
-    .hero-section {
-        min-height: auto;
-        padding-top: 70px;
-        padding-bottom: 85px;
-    }
-
-    .hero-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .hero-content h1 {
-        font-size: clamp(2.5rem, 10vw, 4rem);
-    }
-
-    .hero-visual {
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    .profile-card {
-        transform: none;
-    }
-
-    .scroll-indicator {
-        display: none;
-    }
-
-    .section-heading {
-        margin-bottom: 37px;
-    }
-
-    .about-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .about-main {
-        padding: 27px;
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 13px;
-    }
-
-    .skill-card {
-        padding: 21px 17px;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-visual {
-        min-height: 225px;
-    }
-
-    .education-layout {
-        grid-template-columns: 1fr;
-        gap: 38px;
-    }
-
-    .education-summary {
-        position: static;
-    }
-
-    .contact-panel {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        padding: 28px;
-    }
-
-    .footer-content {
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 430px) {
-    .container {
-        width: calc(100% - 30px);
-    }
-
-    .hero-content h1 {
-        font-size: 2.45rem;
-        letter-spacing: -1.7px;
-    }
-
-    .hero-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
-    }
-
-    .hero-socials {
-        gap: 19px;
-    }
-
-    .floating-badge {
-        padding: 9px 11px;
-        font-size: 0.69rem;
-    }
-
-    .code-preview {
-        padding: 22px 16px;
-        font-size: 0.72rem;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .skill-card {
-        padding: 22px;
-    }
-
-    .timeline {
-        padding-left: 24px;
-    }
-
-    .timeline-marker {
-        left: -24px;
-    }
-
-    .timeline-content {
-        padding: 19px;
-    }
-
-    .education-summary {
-        padding: 23px;
-    }
-
-    .contact-panel {
-        padding: 22px 17px;
-    }
-
-    .contact-link {
-        gap: 10px;
-        padding: 13px 10px;
-    }
-
-    .contact-detail strong {
-        font-size: 0.77rem;
-    }
-
-    .footer-content {
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        gap: 9px;
-    }
-}
-
-/* ACCESSIBILITY */
-
-a:focus-visible {
-    outline: 2px solid var(--cyan);
-    outline-offset: 4px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ronak Singhal's personal portfolio, education, skills and projects.">
+    <title>Ronak Singhal | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+    <nav class="navbar container">
+        <a href="#home" class="logo">Ronak<span>.</span></a>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact" class="nav-contact">Let's Talk ↗</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HOME -->
+    <section class="hero-section section" id="home">
+        <div class="container hero-layout">
+
+            <div class="hero-content">
+                <p class="eyebrow">
+                    <span class="status-dot"></span>
+                    B.Tech Student · Aspiring Developer
+                </p>
+
+                <h1>Hi, I'm <span>Ronak Singhal.</span></h1>
+                <h2>Building ideas into <span class="accent-text">digital experiences.</span></h2>
+
+                <p class="hero-description">
+                    I'm a second-year B.Tech student passionate about technology,
+                    problem-solving, and creating useful web experiences.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Explore My Work ↗</a>
+                    <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://github.com/ronaksinghal2006-hash"
+                       target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+
+                    <a href="https://www.linkedin.com/in/ronak-singhal-084805369/"
+                       target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                </div>
+            </div>
+
+            <!-- PHOTO AREA: save your picture as ronak.jpg -->
+            <div class="hero-visual">
+                <div class="photo-glow"></div>
+
+                <div class="profile-photo-frame">
+                    <img
+                        src="ronak.jpg"
+                        alt="Photo of Ronak Singhal"
+                        class="profile-photo"
+                    >
+
+                    <div class="photo-placeholder">
+                        <span class="placeholder-icon">＋</span>
+                        <h3>Your Photo Goes Here</h3>
+                        <p>Add your picture as <strong>ronak.jpg</strong></p>
+                    </div>
+                </div>
+
+                <div class="floating-badge badge-one">💻 Web Development</div>
+                <div class="floating-badge badge-two">✦ Always Learning</div>
+            </div>
+
+        </div>
+        <a class="scroll-indicator" href="#about">Scroll to explore ↓</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">GET TO KNOW ME</p>
+                <h2>About <span>Me</span></h2>
+                <p>A little about my journey, interests, and goals.</p>
+            </div>
+
+            <div class="about-layout">
+                <div class="about-card about-main">
+                    <span class="card-icon">✦</span>
+                    <h3>Learning today. Building for tomorrow.</h3>
+                    <p>
+                        I'm Ronak Singhal, a second-year B.Tech student at
+                        GL Bajaj Institute of Management and Technology.
+                        I enjoy learning how technology works and applying
+                        that knowledge to practical projects.
+                    </p>
+                    <p>
+                        My goal is to strengthen my technical skills, explore
+                        web development, and create projects that solve real problems.
+                    </p>
+                </div>
+
+                <div class="about-side">
+                    <div class="info-card">
+                        <span class="info-icon">🎓</span>
+                        <div>
+                            <h3>Education</h3>
+                            <p>B.Tech · Second Year</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-icon">📍</span>
+                        <div>
+                            <h3>Institute</h3>
+                            <p>GL Bajaj Institute of Management and Technology</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-icon">🚀</span>
+                        <div>
+                            <h3>Current Focus</h3>
+                            <p>Learning, building, and improving</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section-soft" id="skills">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">WHAT I'M LEARNING</p>
+                <h2>My <span>Skills</span></h2>
+                <p>Technologies and abilities I'm developing along the way.</p>
+            </div>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <span class="skill-symbol">&lt;/&gt;</span>
+                    <h3>HTML</h3>
+                    <p>Creating structured web pages.</p>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-symbol">#</span>
+                    <h3>CSS</h3>
+                    <p>Styling responsive interfaces.</p>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-symbol">JS</span>
+                    <h3>JavaScript</h3>
+                    <p>Exploring interactive web experiences.</p>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-symbol">⌘</span>
+                    <h3>Problem Solving</h3>
+                    <p>Practising logical thinking.</p>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-symbol">Git</span>
+                    <h3>Git & GitHub</h3>
+                    <p>Managing and sharing project code.</p>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-symbol">↗</span>
+                    <h3>Continuous Learning</h3>
+                    <p>Exploring new tools and techniques.</p>
+                </article>
+            </div>
+
+            <p class="skills-note">
+                Update this section as your skills and experience grow.
+            </p>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">SOME THINGS I'VE BUILT</p>
+                <h2>Featured <span>Projects</span></h2>
+                <p>Explore my projects and their source code on GitHub.</p>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-visual bookstore-visual">
+                        <span class="project-number">PROJECT 01</span>
+
+                        <div class="book-illustration">
+                            <div class="book book-back"></div>
+                            <div class="book book-middle"></div>
+                            <div class="book book-front">
+                                <span>BOOK</span>
+                                <strong>STORE</strong>
+                            </div>
+                        </div>
+
+                        <span class="visual-caption">A place for readers</span>
+                    </div>
+
+                    <div class="project-content">
+                        <p class="project-type">Web Development</p>
+                        <h3>GL Bajaj Bookstore</h3>
+                        <p>
+                            A bookstore website project developed as part
+                            of my web development journey.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Web Design</span>
+                        </div>
+
+                        <a class="project-link"
+                           href="https://github.com/ronaksinghal2006-hash/GLBAJAJBOOKSTORE"
+                           target="_blank" rel="noopener noreferrer">
+                            View Project on GitHub <span>↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual portfolio-visual">
+                        <span class="project-number">PROJECT 02</span>
+
+                        <div class="mini-browser">
+                            <div class="mini-browser-top">
+                                <i></i><i></i><i></i>
+                            </div>
+                            <div class="mini-browser-body">
+                                <span class="mini-line short"></span>
+                                <span class="mini-title">My Portfolio</span>
+                                <span class="mini-line"></span>
+                                <span class="mini-line medium"></span>
+                                <div class="mini-button"></div>
+                            </div>
+                        </div>
+
+                        <span class="visual-caption">My work, my journey</span>
+                    </div>
+
+                    <div class="project-content">
+                        <p class="project-type">Personal Project</p>
+                        <h3>Portfolio Website</h3>
+                        <p>
+                            My personal website to present my background,
+                            education, skills, and projects.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Responsive Design</span>
+                        </div>
+
+                        <a class="project-link"
+                           href="https://github.com/ronaksinghal2006-hash/portfolio"
+                           target="_blank" rel="noopener noreferrer">
+                            View Project on GitHub <span>↗</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section section-soft" id="education">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">MY ACADEMIC JOURNEY</p>
+                <h2>My <span>Education</span></h2>
+                <p>Every step has helped me learn and grow.</p>
+            </div>
+
+            <div class="education-layout">
+                <div class="education-summary">
+                    <span class="education-icon">🎓</span>
+                    <h3>Learning is a journey.</h3>
+                    <p>
+                        From school to engineering, each chapter has helped
+                        me build a stronger academic foundation.
+                    </p>
+
+                    <div class="education-highlight">
+                        <span>First-year SGPA</span>
+                        <strong>8.63</strong>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <p class="timeline-date">Class 10</p>
+
+                        <div class="timeline-content">
+                            <span class="timeline-tag">School Education</span>
+                            <h3>Yaduvanshi Shiksha Niketan</h3>
+
+                            <div class="education-result">
+                                <span class="result-label">Score</span>
+                                <strong>87.5%</strong>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <p class="timeline-date">Class 12</p>
+
+                        <div class="timeline-content">
+                            <span class="timeline-tag">Senior Secondary</span>
+                            <h3>Sh Rama Bharti High School</h3>
+
+                            <div class="education-result">
+                                <span class="result-label">Score</span>
+                                <strong>86.83%</strong>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item current-education">
+                        <div class="timeline-marker"></div>
+                        <p class="timeline-date">Currently · Second Year</p>
+
+                        <div class="timeline-content">
+                            <span class="timeline-tag current-tag">Undergraduate</span>
+                            <h3>GL Bajaj Institute of Management and Technology</h3>
+                            <p class="degree-name">Bachelor of Technology (B.Tech)</p>
+
+                            <div class="education-result">
+                                <span class="result-label">First-year SGPA</span>
+                                <strong>8.63</strong>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="contact-panel">
+
+                <div class="contact-copy">
+                    <p class="eyebrow">HAVE A QUESTION OR IDEA?</p>
+                    <h2>Let's build something <span>great together.</span></h2>
+                    <p>
+                        I'm always happy to connect, discuss ideas, and learn
+                        from new opportunities. Feel free to reach out!
+                    </p>
+
+                    <a class="btn btn-primary email-button"
+                       href="mailto:ronaksinghal2006@gmail.com">
+                        Email Me ↗
+                    </a>
+                </div>
+
+                <div class="contact-links">
+
+                    <!-- GMAIL -->
+                    <a class="contact-link"
+                       href="mailto:ronaksinghal2006@gmail.com">
+                        <span class="contact-icon gmail-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" role="img">
+                                <path fill="#4285F4" d="M6 12.5A4.5 4.5 0 0 1 10.5 8H14v32h-4.5A3.5 3.5 0 0 1 6 36.5z"/>
+                                <path fill="#34A853" d="M34 8h3.5a4.5 4.5 0 0 1 4.5 4.5v24a3.5 3.5 0 0 1-3.5 3.5H34z"/>
+                                <path fill="#EA4335" d="M6 12.5A4.5 4.5 0 0 1 13.3 9l10.7 8.2L34.7 9a4.5 4.5 0 0 1 7.3 3.5v2L24 28 6 14.5z"/>
+                                <path fill="#C5221F" d="M34 15.2 42 9v6.5L34 22z"/>
+                                <path fill="#FBBC04" d="M6 15l8 6v-5.8L6 9z"/>
+                            </svg>
+                        </span>
+
+                        <span class="contact-detail">
+                            <small>Email</small>
+                            <strong>ronaksinghal2006@gmail.com</strong>
+                        </span>
+
+                        <span class="contact-arrow">↗</span>
+                    </a>
+
+                    <!-- GITHUB -->
+                    <a class="contact-link"
+                       href="https://github.com/ronaksinghal2006-hash"
+                       target="_blank" rel="noopener noreferrer">
+                        <span class="contact-icon github-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="img">
+                                <path fill="currentColor" d="M12 .9a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 .1.84 2.08 3.64 1.58.1-.74.39-1.25.7-1.54-2.5-.29-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.44.11-3 0 0 .95-.3 3.08 1.16a10.7 10.7 0 0 1 5.6 0c2.13-1.45 3.08-1.16 3.08-1.16.61 1.56.23 2.71.11 3 .72.79 1.16 1.8 1.16 3.03 0 4.32-2.64 5.27-5.15 5.55.4.35.75 1.03.75 2.08v3.1c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .9z"/>
+                            </svg>
+                        </span>
+
+                        <span class="contact-detail">
+                            <small>GitHub</small>
+                            <strong>ronaksinghal2006-hash</strong>
+                        </span>
+
+                        <span class="contact-arrow">↗</span>
+                    </a>
+
+                    <!-- LINKEDIN -->
+                    <a class="contact-link"
+                       href="https://www.linkedin.com/in/ronak-singhal-084805369/"
+                       target="_blank" rel="noopener noreferrer">
+                        <span class="contact-icon linkedin-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="img">
+                                <path fill="currentColor" d="M5.2 3.1a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2zM3.4 9h3.7v11.7H3.4zM9.4 9H13v1.6h.05A4 4 0 0 1 16.65 8.7c3.85 0 4.56 2.53 4.56 5.82v6.18h-3.75v-5.48c0-1.31-.02-3-1.83-3s-2.11 1.43-2.11 2.9v5.58H9.8V9z"/>
+                            </svg>
+                        </span>
+
+                        <span class="contact-detail">
+                            <small>LinkedIn</small>
+                            <strong>Connect with me</strong>
+                        </span>
+
+                        <span class="contact-arrow">↗</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <a href="#home" class="logo">Ronak<span>.</span></a>
+        <p>Designed and built by Ronak Singhal.</p>
+        <a href="#home" class="back-to-top">Back to top ↑</a>
+    </div>
+</footer>
+
+</body>
+</html>
