@@ -1,1 +1,549 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Ronak Singhal's personal portfolio showcasing skills, projects, education, and contact information.">
+
+    <title>Ronak Singhal | Developer Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Background decoration -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+
+            <a href="#home" class="logo">
+                <span class="logo-bracket">&lt;</span>RS<span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <button class="menu-toggle"
+                    id="menu-toggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-contact">Let's Talk <span>↗</span></a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero section -->
+        <section class="hero section" id="home">
+            <div class="container hero-layout">
+
+                <div class="hero-content reveal">
+                    <div class="availability">
+                        <span class="status-dot"></span>
+                        <span>WELCOME TO MY PORTFOLIO</span>
+                    </div>
+
+                    <p class="hero-intro">HELLO, I'M</p>
+
+                    <h1>Ronak <span>Singhal.</span></h1>
+
+                    <h2 class="hero-role">
+                        Aspiring Developer <span class="role-divider">/</span>
+                        <span class="accent-text">Creative Thinker</span>
+                    </h2>
+
+                    <p class="hero-description">
+                        I enjoy turning ideas into useful digital experiences.
+                        I'm learning, experimenting, and building projects that
+                        help me grow as a developer every day.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="button button-primary">
+                            Explore My Work <span>↗</span>
+                        </a>
+
+                        <a href="#contact" class="button button-outline">
+                            Get In Touch
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <span>CONNECT WITH ME</span>
+                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                    </div>
+                </div>
+
+                <!-- Decorative developer card -->
+                <div class="hero-visual reveal">
+                    <div class="orbit orbit-one"></div>
+                    <div class="orbit orbit-two"></div>
+
+                    <div class="code-card">
+                        <div class="code-card-top">
+                            <div class="window-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="file-label">ronak.js</span>
+                            <span class="file-menu">•••</span>
+                        </div>
+
+                        <div class="code-content">
+                            <p><span class="line-number">01</span> <span class="code-purple">const</span> developer = {</p>
+                            <p><span class="line-number">02</span> &nbsp; name: <span class="code-green">'Ronak Singhal'</span>,</p>
+                            <p><span class="line-number">03</span> &nbsp; mindset: <span class="code-green">'Always learning'</span>,</p>
+                            <p><span class="line-number">04</span> &nbsp; creative: <span class="code-orange">true</span>,</p>
+                            <p><span class="line-number">05</span> &nbsp; building: <span class="code-green">'New ideas'</span>,</p>
+                            <p><span class="line-number">06</span> &nbsp; growth: <span class="code-green">'Every day'</span></p>
+                            <p><span class="line-number">07</span> };</p>
+                            <p class="code-last"><span class="line-number">08</span> <span class="code-purple">console</span>.log(developer);<span class="cursor"></span></p>
+                        </div>
+
+                        <div class="code-card-footer">
+                            <span><span class="footer-dot"></span> Ready to create</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-chip chip-top">
+                        <span class="chip-icon">✳</span>
+                        <div>
+                            <strong>Curiosity</strong>
+                            <small>My starting point</small>
+                        </div>
+                    </div>
+
+                    <div class="floating-chip chip-bottom">
+                        <span class="chip-icon blue-icon">⌘</span>
+                        <div>
+                            <strong>Build. Learn. Repeat.</strong>
+                            <small>One project at a time</small>
+                        </div>
+                    </div>
+
+                    <div class="visual-caption">IDEAS INTO INTERFACES <span>✦</span></div>
+                </div>
+
+            </div>
+
+            <a href="#about" class="scroll-indicator">
+                <span class="scroll-line"></span>
+                SCROLL TO EXPLORE
+            </a>
+        </section>
+
+        <!-- About section -->
+        <section class="section about-section" id="about">
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <p class="section-label">01 / A LITTLE ABOUT ME</p>
+                    <h2>More than just<br> <span class="accent-text">writing code.</span></h2>
+                </div>
+
+                <div class="about-layout">
+                    <div class="about-main reveal">
+                        <div class="about-mark">RS<span>.</span></div>
+                        <h3>Curious by nature.<br>Driven by possibilities.</h3>
+
+                        <p>
+                            I'm Ronak Singhal, an aspiring developer interested
+                            in technology, problem-solving, and creating
+                            meaningful digital experiences.
+                        </p>
+
+                        <p>
+                            I believe the best way to learn is by building.
+                            Every project gives me a chance to discover
+                            something new, improve my skills, and turn an idea
+                            into something real.
+                        </p>
+
+                        <a href="#contact" class="text-link">Let's connect <span>↗</span></a>
+                    </div>
+
+                    <div class="about-details reveal">
+                        <div class="detail-card">
+                            <span class="detail-number">01</span>
+                            <div>
+                                <h4>Learn continuously</h4>
+                                <p>Explore new concepts and strengthen my fundamentals.</p>
+                            </div>
+                        </div>
+
+                        <div class="detail-card">
+                            <span class="detail-number">02</span>
+                            <div>
+                                <h4>Build with purpose</h4>
+                                <p>Turn what I learn into practical projects.</p>
+                            </div>
+                        </div>
+
+                        <div class="detail-card">
+                            <span class="detail-number">03</span>
+                            <div>
+                                <h4>Think creatively</h4>
+                                <p>Look for simple, thoughtful ways to solve problems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills section -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+
+                <div class="section-heading section-heading-row reveal">
+                    <div>
+                        <p class="section-label">02 / WHAT I WORK WITH</p>
+                        <h2>My <span class="accent-text">toolkit.</span></h2>
+                    </div>
+
+                    <p class="heading-description">
+                        The tools and technologies I'm learning and using
+                        to bring ideas to life.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+
+                    <article class="skill-card skill-featured reveal">
+                        <div class="skill-card-top">
+                            <span class="skill-icon html-icon">&lt;/&gt;</span>
+                            <span class="skill-index">01</span>
+                        </div>
+                        <h3>Frontend</h3>
+                        <p>Building the structure and visual experience of websites.</p>
+                        <div class="skill-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-card-top">
+                            <span class="skill-icon problem-icon">⌘</span>
+                            <span class="skill-index">02</span>
+                        </div>
+                        <h3>Problem Solving</h3>
+                        <p>Breaking challenges into smaller, manageable steps.</p>
+                        <div class="skill-tags">
+                            <span>Logic</span>
+                            <span>Debugging</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-card-top">
+                            <span class="skill-icon tools-icon">⚙</span>
+                            <span class="skill-index">03</span>
+                        </div>
+                        <h3>Developer Tools</h3>
+                        <p>Learning the tools that make development smoother.</p>
+                        <div class="skill-tags">
+                            <span>VS Code</span>
+                            <span>Git</span>
+                            <span>GitHub</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-card-top">
+                            <span class="skill-icon growth-icon">↗</span>
+                            <span class="skill-index">04</span>
+                        </div>
+                        <h3>Growth Mindset</h3>
+                        <p>Learning from feedback, practice, and experimentation.</p>
+                        <div class="skill-tags">
+                            <span>Learning</span>
+                            <span>Creativity</span>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="skills-note">
+                    <span>✳</span> This toolkit can grow as I learn new technologies.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Projects section -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+
+                <div class="section-heading section-heading-row reveal">
+                    <div>
+                        <p class="section-label">03 / SELECTED WORK</p>
+                        <h2>Things I've <span class="accent-text">built.</span></h2>
+                    </div>
+
+                    <p class="heading-description">
+                        A growing collection of experiments, practice projects,
+                        and ideas brought to life.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <article class="project-card project-large reveal">
+                        <div class="project-preview bookstore-preview">
+                            <div class="preview-topbar">
+                                <span>BOOKSPACE</span>
+                                <span>☰</span>
+                            </div>
+
+                            <div class="bookstore-layout">
+                                <div class="bookstore-copy">
+                                    <span>YOUR NEXT CHAPTER</span>
+                                    <h3>Find your<br>next great read.</h3>
+                                    <div class="preview-button">EXPLORE BOOKS ↗</div>
+                                </div>
+
+                                <div class="book-stack">
+                                    <div class="book book-one">READ<br>MORE</div>
+                                    <div class="book book-two">YOUR<br>STORY</div>
+                                    <div class="book book-three">NEW<br>IDEAS</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span>01 / WEB DESIGN</span>
+                                <span class="project-status">Practice project</span>
+                            </div>
+
+                            <h3>Bookstore Website</h3>
+                            <p>
+                                A concept bookstore interface focused on a
+                                clear layout, engaging visuals, and simple navigation.
+                            </p>
+
+                            <div class="project-footer">
+                                <div class="project-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <a href="#contact" class="project-link" aria-label="Ask about the Bookstore Website project">↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-preview portfolio-preview">
+                            <div class="mini-browser">
+                                <div class="mini-browser-bar">
+                                    <span></span><span></span><span></span>
+                                </div>
+
+                                <div class="mini-portfolio">
+                                    <span class="mini-label">HELLO, WORLD!</span>
+                                    <div class="mini-title">Building<br>something<br><span>new.</span></div>
+                                    <div class="mini-lines">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="mini-circle">RS</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span>02 / PERSONAL BRAND</span>
+                                <span class="project-status">Portfolio</span>
+                            </div>
+
+                            <h3>Personal Portfolio</h3>
+                            <p>
+                                A personal website designed to introduce me,
+                                showcase my work, and make it easy to connect.
+                            </p>
+
+                            <div class="project-footer">
+                                <div class="project-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <a href="#home" class="project-link" aria-label="View the top of this portfolio">↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="projects-note">
+                    Replace these sample project descriptions and links with
+                    your real projects as you publish them.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Education section -->
+        <section class="section education-section" id="education">
+            <div class="container education-layout">
+
+                <div class="section-heading reveal">
+                    <p class="section-label">04 / MY JOURNEY</p>
+                    <h2>Learning is<br><span class="accent-text">a journey.</span></h2>
+                    <p class="education-intro">
+                        Every step adds something to the bigger picture.
+                    </p>
+                </div>
+
+                <div class="timeline reveal">
+                    <div class="timeline-item">
+                        <span class="timeline-marker"></span>
+                        <div class="timeline-date">EDUCATION</div>
+                        <h3>My Academic Journey</h3>
+                        <p>
+                            Add your school or college name, qualification,
+                            and graduation year here.
+                        </p>
+                        <span class="timeline-tag">In progress / Completed</span>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-marker"></span>
+                        <div class="timeline-date">SKILL DEVELOPMENT</div>
+                        <h3>Learning Through Projects</h3>
+                        <p>
+                            Practicing web development, exploring new tools,
+                            and building projects to improve my skills.
+                        </p>
+                        <span class="timeline-tag">Continuous learning</span>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-marker"></span>
+                        <div class="timeline-date">LOOKING AHEAD</div>
+                        <h3>What's Next?</h3>
+                        <p>
+                            Keep growing, take on new challenges, and create
+                            projects that solve real problems.
+                        </p>
+                        <span class="timeline-tag">Future goals</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+
+                <div class="contact-panel reveal">
+                    <div class="contact-copy">
+                        <p class="section-label">05 / LET'S CONNECT</p>
+                        <h2>Have an idea?<br><span>Let's build it.</span></h2>
+                        <p>
+                            Have a project idea, an opportunity, or just want
+                            to say hello? I'd be happy to hear from you.
+                        </p>
+
+                        <a class="button button-light"
+                           href="mailto:your-email@example.com">
+                            Send Me an Email <span>↗</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-decoration" aria-hidden="true">
+                        <div class="contact-orbit orbit-a"></div>
+                        <div class="contact-orbit orbit-b"></div>
+                        <div class="contact-symbol">&lt;RS/&gt;</div>
+                        <span class="contact-star star-a">✳</span>
+                        <span class="contact-star star-b">✦</span>
+                    </div>
+                </div>
+
+                <div class="contact-links reveal">
+                    <a href="mailto:your-email@example.com" class="contact-link">
+                        <span class="contact-link-icon">@</span>
+                        <span>
+                            <small>EMAIL ME</small>
+                            <strong>your-email@example.com</strong>
+                        </span>
+                        <span class="contact-arrow">↗</span>
+                    </a>
+
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <span class="contact-link-icon">GH</span>
+                        <span>
+                            <small>EXPLORE MY CODE</small>
+                            <strong>GitHub</strong>
+                        </span>
+                        <span class="contact-arrow">↗</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <span class="contact-link-icon">in</span>
+                        <span>
+                            <small>LET'S NETWORK</small>
+                            <strong>LinkedIn</strong>
+                        </span>
+                        <span class="contact-arrow">↗</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a href="#home" class="logo footer-logo">
+                <span class="logo-bracket">&lt;</span>RS<span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <p>Designed with curiosity and built with care.</p>
+
+            <p class="copyright">
+                © <span id="current-year"></span> Ronak Singhal
+            </p>
+        </div>
+    </footer>
+
+    <a href="#home" class="back-to-top" id="back-to-top" aria-label="Back to top">↑</a>
+
+</body>
+</html>
+
