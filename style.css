@@ -1,8 +1,8 @@
 
-/* ===================================
-   RONAK SINGHAL PORTFOLIO
-   Dark Navy + Electric Blue
-=================================== */
+/* ================================
+   RONAK SINGHAL - PORTFOLIO
+   Dark Navy & Electric Blue Theme
+================================ */
 
 :root {
     --bg: #090d18;
@@ -10,13 +10,14 @@
     --card: #111a2c;
     --card-light: #172239;
     --blue: #69a7ff;
+    --blue-bright: #428bff;
     --cyan: #78e6e7;
     --white: #f4f7ff;
     --text: #a5b0c5;
     --muted: #73809a;
     --border: rgba(153, 177, 220, 0.14);
-    --heading: "Space Grotesk", sans-serif;
-    --body: "DM Sans", sans-serif;
+    --font-heading: "Space Grotesk", sans-serif;
+    --font-body: "DM Sans", sans-serif;
     --container: 1160px;
 }
 
@@ -30,13 +31,13 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 90px;
 }
 
 body {
     background: var(--bg);
     color: var(--white);
-    font-family: var(--body);
+    font-family: var(--font-body);
     line-height: 1.7;
     overflow-x: hidden;
 }
@@ -46,13 +47,24 @@ a {
     text-decoration: none;
 }
 
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
 .container {
     width: min(var(--container), calc(100% - 48px));
     margin: 0 auto;
 }
 
 .section {
-    padding: 100px 0;
+    padding: 105px 0;
 }
 
 .section-soft {
@@ -60,17 +72,17 @@ a {
 }
 
 ::selection {
-    background: var(--blue);
-    color: #07101f;
+    color: white;
+    background: var(--blue-bright);
 }
 
-/* NAVIGATION */
+/* HEADER AND NAVIGATION */
 
 .site-header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(9, 13, 24, 0.92);
+    background: rgba(9, 13, 24, 0.88);
     border-bottom: 1px solid var(--border);
     backdrop-filter: blur(18px);
 }
@@ -84,7 +96,7 @@ a {
 }
 
 .logo {
-    font-family: var(--heading);
+    font-family: var(--font-heading);
     font-size: 1.75rem;
     font-weight: 700;
     letter-spacing: -1px;
@@ -98,13 +110,12 @@ a {
 .nav-links {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 24px;
+    gap: 27px;
 }
 
 .nav-links a {
     color: var(--text);
-    font-size: 0.87rem;
+    font-size: 0.88rem;
     transition: color 0.25s ease;
 }
 
@@ -114,7 +125,7 @@ a {
 
 .nav-links .nav-contact {
     color: var(--white);
-    padding: 9px 15px;
+    padding: 10px 17px;
     border: 1px solid var(--border);
     border-radius: 8px;
 }
@@ -124,20 +135,21 @@ a {
     background: rgba(105, 167, 255, 0.08);
 }
 
-/* HOME / HERO */
+/* HERO SECTION */
 
 .hero-section {
-    position: relative;
-    min-height: 660px;
+    min-height: 680px;
     min-height: min(760px, calc(100vh - 78px));
+    position: relative;
     display: flex;
     align-items: center;
-    padding: 80px 0 95px;
+    padding-top: 85px;
+    padding-bottom: 100px;
     background:
         radial-gradient(
-            circle at 78% 38%,
-            rgba(48, 105, 195, 0.13),
-            transparent 33%
+            circle at 80% 35%,
+            rgba(48, 105, 195, 0.12),
+            transparent 32%
         ),
         var(--bg);
 }
@@ -146,12 +158,12 @@ a {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
-    gap: 65px;
+    gap: 70px;
 }
 
 .eyebrow {
     color: var(--blue);
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -162,7 +174,7 @@ a {
     display: flex;
     align-items: center;
     gap: 10px;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     text-transform: none;
     font-size: 0.9rem;
 }
@@ -177,10 +189,11 @@ a {
 }
 
 .hero-content h1 {
-    font-family: var(--heading);
-    font-size: clamp(2.7rem, 5vw, 4.4rem);
+    font-family: var(--font-heading);
+    font-size: clamp(2.7rem, 5.5vw, 4.7rem);
+    font-weight: 700;
+    letter-spacing: -3px;
     line-height: 1.12;
-    letter-spacing: -2.5px;
     margin-bottom: 20px;
 }
 
@@ -191,10 +204,11 @@ a {
 }
 
 .hero-content h2 {
-    font-family: var(--heading);
-    font-size: clamp(1.5rem, 2.8vw, 2.2rem);
-    line-height: 1.35;
-    margin-bottom: 20px;
+    max-width: 590px;
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 2.8vw, 2.3rem);
+    line-height: 1.3;
+    margin-bottom: 22px;
 }
 
 .accent-text {
@@ -202,9 +216,9 @@ a {
 }
 
 .hero-description {
-    max-width: 550px;
+    max-width: 540px;
     color: var(--text);
-    font-size: 1.03rem;
+    font-size: 1.04rem;
     line-height: 1.9;
 }
 
@@ -212,7 +226,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
-    margin-top: 30px;
+    margin-top: 32px;
 }
 
 .btn {
@@ -220,7 +234,7 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 9px;
+    gap: 10px;
     padding: 12px 22px;
     border-radius: 8px;
     font-size: 0.92rem;
@@ -258,7 +272,7 @@ a {
 .hero-socials {
     display: flex;
     gap: 25px;
-    margin-top: 28px;
+    margin-top: 31px;
 }
 
 .hero-socials a {
@@ -271,119 +285,145 @@ a {
     color: var(--blue);
 }
 
-/* HOME PHOTO FRAME */
+/* HERO CODE CARD */
 
 .hero-visual {
     position: relative;
-    width: 100%;
-    max-width: 430px;
-    justify-self: center;
-    padding: 20px;
+    min-width: 0;
+    padding: 30px 0;
 }
 
-.photo-glow {
+.visual-glow {
     position: absolute;
-    inset: 12%;
-    z-index: 0;
+    inset: 15% 5%;
+    background: rgba(54, 120, 237, 0.16);
+    filter: blur(75px);
     border-radius: 50%;
-    background: rgba(54, 120, 237, 0.22);
-    filter: blur(65px);
 }
 
-.profile-photo-frame {
+.profile-card {
     position: relative;
     z-index: 1;
     width: 100%;
-    aspect-ratio: 4 / 5;
-    max-height: 490px;
+    max-width: 450px;
+    margin: 0 auto;
     overflow: hidden;
-    border: 1px solid rgba(105, 167, 255, 0.4);
-    border-radius: 24px;
-    background:
-        linear-gradient(145deg, #182943, #0e1525);
-    box-shadow: 0 25px 75px rgba(0, 0, 0, 0.32);
+    border: 1px solid rgba(127, 166, 230, 0.2);
+    border-radius: 17px;
+    background: rgba(17, 26, 44, 0.94);
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+    transform: rotate(1deg);
 }
 
-/* Your actual image appears when ronak.jpg exists. */
-.profile-photo {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-}
-
-/* Placeholder is shown if the image is missing. */
-.photo-placeholder {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
+.profile-top {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 25px;
-    text-align: center;
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(105, 167, 255, 0.12),
-            transparent 65%
-        );
+    gap: 7px;
+    padding: 17px 20px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.015);
 }
 
-.placeholder-icon {
-    width: 70px;
-    height: 70px;
-    display: grid;
-    place-items: center;
-    border: 1px dashed var(--blue);
+.window-dot {
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
-    color: var(--blue);
-    font-size: 2.3rem;
 }
 
-.photo-placeholder h3 {
-    font-family: var(--heading);
-    font-size: 1.2rem;
+.red {
+    background: #ff7777;
 }
 
-.photo-placeholder p {
-    color: var(--text);
-    font-size: 0.85rem;
+.yellow {
+    background: #ffd166;
 }
 
-/* Hide placeholder when the photo loads. */
-.profile-photo-frame:has(.profile-photo[src]) .profile-photo {
-    /* The image is layered over the placeholder. */
+.green {
+    background: #64dca0;
 }
 
-/* Floating labels */
+.profile-label {
+    margin-left: auto;
+    color: var(--muted);
+    font-size: 0.76rem;
+}
+
+.code-preview {
+    min-height: 290px;
+    padding: 28px 25px;
+    color: #d7e2f5;
+    font-family: monospace;
+    font-size: clamp(0.76rem, 1.3vw, 0.95rem);
+    line-height: 2.1;
+    overflow-wrap: anywhere;
+}
+
+.code-indent {
+    padding-left: 22px;
+}
+
+.code-purple {
+    color: #c5a1ff;
+}
+
+.code-green {
+    color: #8fe3b0;
+}
+
+.code-orange {
+    color: #ffbd7b;
+}
+
+.code-space {
+    margin-top: 15px;
+}
+
+.cursor {
+    color: var(--cyan);
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+.profile-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 14px 20px;
+    color: var(--muted);
+    font-size: 0.75rem;
+    border-top: 1px solid var(--border);
+}
+
+.profile-bottom span:first-child {
+    color: var(--cyan);
+}
 
 .floating-badge {
     position: absolute;
-    z-index: 4;
-    padding: 11px 15px;
+    z-index: 2;
+    padding: 12px 16px;
     border: 1px solid var(--border);
     border-radius: 10px;
     background: var(--card);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
     color: var(--white);
     font-size: 0.8rem;
     font-weight: 600;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 .badge-one {
-    top: 8%;
-    right: -4px;
+    top: 3px;
+    right: -15px;
 }
 
 .badge-two {
-    bottom: 8%;
-    left: -5px;
+    bottom: 8px;
+    left: -20px;
 }
 
 .scroll-indicator {
@@ -399,7 +439,7 @@ a {
 
 .section-heading {
     max-width: 680px;
-    margin: 0 auto 52px;
+    margin: 0 auto 55px;
     text-align: center;
 }
 
@@ -408,7 +448,7 @@ a {
 }
 
 .section-heading h2 {
-    font-family: var(--heading);
+    font-family: var(--font-heading);
     font-size: clamp(2.1rem, 4vw, 3rem);
     line-height: 1.2;
     letter-spacing: -1.5px;
@@ -436,7 +476,7 @@ a {
 }
 
 .about-main {
-    padding: 35px;
+    padding: 37px;
 }
 
 .card-icon {
@@ -444,7 +484,7 @@ a {
     height: 46px;
     display: grid;
     place-items: center;
-    margin-bottom: 23px;
+    margin-bottom: 25px;
     border-radius: 12px;
     background: rgba(105, 167, 255, 0.12);
     color: var(--blue);
@@ -453,10 +493,10 @@ a {
 
 .about-main h3 {
     max-width: 480px;
-    font-family: var(--heading);
+    font-family: var(--font-heading);
     font-size: 1.7rem;
     line-height: 1.4;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .about-main p {
@@ -477,10 +517,12 @@ a {
 .info-card {
     display: flex;
     align-items: flex-start;
-    gap: 16px;
+    gap: 17px;
     flex: 1;
     padding: 22px;
-    transition: border-color 0.25s ease, transform 0.25s ease;
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
 }
 
 .info-card:hover {
@@ -492,7 +534,7 @@ a {
     font-size: 1.5rem;
 }
 
-.info-card h3 {
+.info-card h4 {
     margin-bottom: 4px;
     font-size: 0.98rem;
 }
@@ -511,7 +553,8 @@ a {
 }
 
 .skill-card {
-    padding: 27px 23px;
+    min-width: 0;
+    padding: 28px 24px;
     border: 1px solid var(--border);
     border-radius: 13px;
     background: var(--card);
@@ -528,12 +571,12 @@ a {
 }
 
 .skill-symbol {
-    min-width: 44px;
-    min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 19px;
+    min-width: 44px;
+    min-height: 44px;
+    margin-bottom: 20px;
     padding: 5px;
     border: 1px solid rgba(105, 167, 255, 0.2);
     border-radius: 10px;
@@ -546,7 +589,7 @@ a {
 
 .skill-card h3 {
     margin-bottom: 8px;
-    font-family: var(--heading);
+    font-family: var(--font-heading);
     font-size: 1.1rem;
 }
 
@@ -576,7 +619,9 @@ a {
     border: 1px solid var(--border);
     border-radius: 15px;
     background: var(--card);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .project-card:hover {
@@ -595,13 +640,13 @@ a {
 
 .bookstore-visual {
     background:
-        radial-gradient(circle at center, rgba(105, 167, 255, 0.19), transparent 48%),
+        radial-gradient(circle at 50% 50%, rgba(105, 167, 255, 0.19), transparent 45%),
         #111f35;
 }
 
 .portfolio-visual {
     background:
-        radial-gradient(circle at center, rgba(120, 230, 231, 0.13), transparent 48%),
+        radial-gradient(circle at 50% 50%, rgba(120, 230, 231, 0.13), transparent 45%),
         #13232f;
 }
 
@@ -617,11 +662,13 @@ a {
 
 .visual-caption {
     position: absolute;
-    right: 20px;
     bottom: 17px;
+    right: 20px;
     color: rgba(226, 236, 255, 0.65);
     font-size: 0.73rem;
 }
+
+/* Bookstore illustration */
 
 .book-illustration {
     position: relative;
@@ -630,6 +677,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    perspective: 500px;
 }
 
 .book {
@@ -655,13 +703,13 @@ a {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 5px;
     transform: translate(-2px, 0) rotate(-3deg);
     background: linear-gradient(145deg, #7caeff, #315c9b);
     color: #fff;
-    font-family: var(--heading);
+    font-family: var(--font-heading);
     font-size: 0.8rem;
     letter-spacing: 1px;
 }
@@ -669,6 +717,8 @@ a {
 .book-front strong {
     font-size: 1rem;
 }
+
+/* Portfolio browser illustration */
 
 .mini-browser {
     width: min(250px, 75%);
@@ -722,7 +772,7 @@ a {
 .mini-title {
     margin-top: 10px;
     color: var(--white);
-    font-family: var(--heading);
+    font-family: var(--font-heading);
     font-size: 1.2rem;
     font-weight: 700;
 }
@@ -750,11 +800,11 @@ a {
 
 .project-content h3 {
     margin-bottom: 12px;
-    font-family: var(--heading);
+    font-family: var(--font-heading);
     font-size: 1.5rem;
 }
 
-.project-content > p:not(.project-type) {
+.project-content > p {
     min-height: 55px;
     color: var(--text);
     font-size: 0.92rem;
@@ -785,6 +835,7 @@ a {
     color: var(--blue);
     font-size: 0.9rem;
     font-weight: 700;
+    transition: color 0.2s ease;
 }
 
 .project-link:hover {
@@ -801,7 +852,7 @@ a {
     display: grid;
     grid-template-columns: 0.75fr 1.25fr;
     align-items: start;
-    gap: 55px;
+    gap: 65px;
 }
 
 .education-summary {
@@ -829,7 +880,7 @@ a {
 
 .education-summary h3 {
     margin-bottom: 12px;
-    font-family: var(--heading);
+    font-family: var(--font-heading);
     font-size: 1.6rem;
     line-height: 1.4;
 }
@@ -855,7 +906,7 @@ a {
 
 .education-highlight strong {
     color: var(--cyan);
-    font-family: var(--heading);
+    font-family: var(--font-heading);
     font-size: 2.4rem;
     line-height: 1.3;
 }
@@ -872,12 +923,16 @@ a {
     bottom: 30px;
     left: 6px;
     width: 2px;
-    background: linear-gradient(to bottom, var(--blue), rgba(105, 167, 255, 0.12));
+    background: linear-gradient(
+        to bottom,
+        var(--blue),
+        rgba(105, 167, 255, 0.12)
+    );
 }
 
 .timeline-item {
     position: relative;
-    padding-bottom: 34px;
+    padding: 0 0 34px 0;
 }
 
 .timeline-marker {
@@ -929,7 +984,7 @@ a {
 
 .timeline-content h3 {
     margin-bottom: 12px;
-    font-family: var(--heading);
+    font-family: var(--font-heading);
     font-size: 1.12rem;
     line-height: 1.5;
 }
@@ -957,7 +1012,7 @@ a {
 
 .education-result strong {
     color: var(--cyan);
-    font-family: var(--heading);
+    font-family: var(--font-heading);
     font-size: 1.2rem;
 }
 
@@ -965,7 +1020,7 @@ a {
     border-color: rgba(120, 230, 231, 0.25);
 }
 
-/* CONTACT SECTION */
+/* CONTACT */
 
 .contact-section {
     padding-top: 100px;
@@ -974,21 +1029,21 @@ a {
 
 .contact-panel {
     display: grid;
-    grid-template-columns: 1fr 0.95fr;
+    grid-template-columns: 1fr 0.9fr;
     align-items: center;
     gap: 55px;
-    padding: clamp(28px, 5vw, 60px);
-    border: 1px solid rgba(105, 167, 255, 0.24);
-    border-radius: 28px;
+    padding: clamp(27px, 5vw, 60px);
+    border: 1px solid rgba(105, 167, 255, 0.2);
+    border-radius: 20px;
     background:
         radial-gradient(circle at top left, rgba(66, 139, 255, 0.1), transparent 45%),
-        #111a2c;
+        var(--card);
 }
 
 .contact-copy h2 {
     max-width: 520px;
     margin-bottom: 20px;
-    font-family: var(--heading);
+    font-family: var(--font-heading);
     font-size: clamp(2rem, 4vw, 3.1rem);
     line-height: 1.2;
     letter-spacing: -1.5px;
@@ -1004,23 +1059,21 @@ a {
     margin-top: 27px;
 }
 
-/* CONTACT LINKS AND BRAND LOGOS */
-
 .contact-links {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 13px;
     min-width: 0;
 }
 
 .contact-link {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 14px;
     min-width: 0;
     padding: 17px;
     border: 1px solid var(--border);
-    border-radius: 16px;
+    border-radius: 11px;
     background: rgba(9, 13, 24, 0.35);
     transition:
         transform 0.25s ease,
@@ -1029,37 +1082,23 @@ a {
 }
 
 .contact-link:hover {
-    transform: translateY(-3px);
+    transform: translateX(4px);
     border-color: rgba(105, 167, 255, 0.45);
     background: rgba(105, 167, 255, 0.05);
 }
 
 .contact-icon {
-    width: 62px;
-    height: 62px;
     display: grid;
     place-items: center;
+    width: 43px;
+    height: 43px;
     flex-shrink: 0;
-    border: 1px solid rgba(105, 167, 255, 0.22);
-    border-radius: 15px;
-    background: rgba(105, 167, 255, 0.1);
+    border: 1px solid rgba(105, 167, 255, 0.18);
+    border-radius: 10px;
+    background: rgba(105, 167, 255, 0.09);
     color: var(--blue);
-}
-
-.contact-icon svg {
-    width: 28px;
-    height: 28px;
-    display: block;
-}
-
-.github-icon svg {
-    width: 30px;
-    height: 30px;
-}
-
-.linkedin-icon svg {
-    width: 29px;
-    height: 29px;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
 .contact-detail {
@@ -1071,25 +1110,20 @@ a {
 
 .contact-detail small {
     color: var(--muted);
-    font-size: 0.83rem;
+    font-size: 0.75rem;
 }
 
 .contact-detail strong {
     overflow-wrap: anywhere;
     color: var(--white);
-    font-size: 0.96rem;
-    font-weight: 700;
+    font-size: 0.88rem;
+    font-weight: 600;
 }
 
 .contact-arrow {
     flex-shrink: 0;
     color: var(--blue);
-    font-size: 1.6rem;
-    transition: transform 0.25s ease;
-}
-
-.contact-link:hover .contact-arrow {
-    transform: translate(3px, -3px);
+    font-size: 1.1rem;
 }
 
 /* FOOTER */
@@ -1119,44 +1153,53 @@ a {
     font-size: 0.83rem;
 }
 
+.back-to-top {
+    transition: color 0.2s ease;
+}
+
 .back-to-top:hover {
     color: var(--blue);
 }
 
-/* RESPONSIVE TABLET */
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 1000px) {
     .nav-links {
-        gap: 14px;
+        gap: 16px;
     }
 
     .nav-links a {
-        font-size: 0.81rem;
+        font-size: 0.82rem;
     }
 
     .hero-layout {
-        gap: 30px;
+        gap: 35px;
     }
 
     .hero-content h1 {
-        letter-spacing: -1.7px;
+        letter-spacing: -2px;
+    }
+
+    .badge-one {
+        right: -5px;
+    }
+
+    .badge-two {
+        left: -5px;
+    }
+
+    .education-layout {
+        gap: 35px;
     }
 
     .contact-panel {
         gap: 30px;
     }
-
-    .contact-icon {
-        width: 52px;
-        height: 52px;
-    }
 }
-
-/* RESPONSIVE MOBILE */
 
 @media (max-width: 760px) {
     .container {
-        width: min(calc(100% - 36px), var(--container));
+        width: min(100% - 36px, var(--container));
     }
 
     .section {
@@ -1165,15 +1208,17 @@ a {
 
     .navbar {
         min-height: auto;
+        padding-top: 17px;
+        padding-bottom: 17px;
         align-items: flex-start;
         flex-direction: column;
         gap: 12px;
-        padding-top: 15px;
-        padding-bottom: 15px;
     }
 
     .nav-links {
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
         gap: 9px 17px;
     }
 
@@ -1187,8 +1232,8 @@ a {
 
     .hero-section {
         min-height: auto;
-        padding-top: 65px;
-        padding-bottom: 80px;
+        padding-top: 70px;
+        padding-bottom: 85px;
     }
 
     .hero-layout {
@@ -1197,17 +1242,17 @@ a {
     }
 
     .hero-content h1 {
-        font-size: clamp(2.5rem, 9vw, 4rem);
+        font-size: clamp(2.5rem, 10vw, 4rem);
     }
 
     .hero-visual {
         width: 100%;
-        max-width: 390px;
+        max-width: 500px;
         margin: 0 auto;
     }
 
-    .profile-photo-frame {
-        max-height: 450px;
+    .profile-card {
+        transform: none;
     }
 
     .scroll-indicator {
@@ -1215,7 +1260,7 @@ a {
     }
 
     .section-heading {
-        margin-bottom: 36px;
+        margin-bottom: 37px;
     }
 
     .about-layout {
@@ -1223,7 +1268,7 @@ a {
     }
 
     .about-main {
-        padding: 26px;
+        padding: 27px;
     }
 
     .skills-grid {
@@ -1239,9 +1284,13 @@ a {
         grid-template-columns: 1fr;
     }
 
+    .project-visual {
+        min-height: 225px;
+    }
+
     .education-layout {
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 38px;
     }
 
     .education-summary {
@@ -1252,15 +1301,12 @@ a {
         grid-template-columns: 1fr;
         gap: 35px;
         padding: 28px;
-        border-radius: 20px;
     }
 
     .footer-content {
         flex-wrap: wrap;
     }
 }
-
-/* SMALL PHONES */
 
 @media (max-width: 430px) {
     .container {
@@ -1269,7 +1315,7 @@ a {
 
     .hero-content h1 {
         font-size: 2.45rem;
-        letter-spacing: -1.5px;
+        letter-spacing: -1.7px;
     }
 
     .hero-content h2 {
@@ -1286,11 +1332,7 @@ a {
     }
 
     .hero-socials {
-        gap: 18px;
-    }
-
-    .hero-visual {
-        padding: 12px;
+        gap: 19px;
     }
 
     .floating-badge {
@@ -1298,16 +1340,17 @@ a {
         font-size: 0.69rem;
     }
 
-    .badge-one {
-        right: -4px;
-    }
-
-    .badge-two {
-        left: -4px;
+    .code-preview {
+        padding: 22px 16px;
+        font-size: 0.72rem;
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        padding: 22px;
     }
 
     .timeline {
@@ -1327,38 +1370,23 @@ a {
     }
 
     .contact-panel {
-        padding: 22px 16px;
+        padding: 22px 17px;
     }
 
     .contact-link {
         gap: 10px;
-        padding: 12px 10px;
-    }
-
-    .contact-icon {
-        width: 43px;
-        height: 43px;
-        border-radius: 11px;
-    }
-
-    .contact-icon svg {
-        width: 23px;
-        height: 23px;
+        padding: 13px 10px;
     }
 
     .contact-detail strong {
-        font-size: 0.76rem;
-    }
-
-    .contact-arrow {
-        font-size: 1.2rem;
+        font-size: 0.77rem;
     }
 
     .footer-content {
         justify-content: center;
         flex-direction: column;
-        gap: 9px;
         text-align: center;
+        gap: 9px;
     }
 }
 
