@@ -1,4 +1,3 @@
-
 /* ================================
    RONAK SINGHAL - PORTFOLIO
    Dark Navy & Electric Blue Theme
@@ -367,6 +366,53 @@ textarea {
 }
 
 .profile-bottom span:first-child { color: var(--cyan); }
+
+/* PROFILE PHOTO
+   im.jpg ke andar jo gol photo hai (approx 990px, left 44, top 331),
+   sirf wahi frame me dikhta hai. Safed/kaala kinara cut ho jata hai. */
+
+.profile-photo-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 28px 25px 6px;
+}
+
+.profile-photo-frame {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid var(--blue);
+    background: var(--card);
+    box-shadow:
+        0 0 0 6px rgba(105, 167, 255, 0.12),
+        0 15px 40px rgba(66, 139, 255, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo-frame:hover {
+    transform: scale(1.04);
+    box-shadow:
+        0 0 0 8px rgba(105, 167, 255, 0.18),
+        0 20px 50px rgba(66, 139, 255, 0.35);
+}
+
+.profile-photo {
+    position: absolute;
+    width: 109.1%;
+    max-width: none;
+    height: auto;
+    left: -4.44%;
+    top: -33.43%;
+}
+
+/* Code block compact with photo */
+.profile-card .code-preview {
+    min-height: auto;
+    padding: 18px 25px 24px;
+    line-height: 1.9;
+}
 
 .floating-badge {
     position: absolute;
@@ -1122,6 +1168,11 @@ a:focus-visible {
     }
 
     .hero-buttons .btn { width: 100%; }
+
+    .profile-photo-frame {
+        width: 120px;
+        height: 120px;
+    }
 
     .floating-badge { font-size: 0.7rem; padding: 9px 11px; }
     .badge-one { right: -4px; }
